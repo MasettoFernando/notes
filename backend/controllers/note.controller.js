@@ -1,4 +1,4 @@
-const noteService = require('../Services/note.services');
+const noteService = require('../services/note.services');
 
 const getNotes = async (req, res) => {
   const userId = req.user.userId; 

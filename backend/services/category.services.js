@@ -1,5 +1,5 @@
 // /src/controllers/category.controller.js
-const categoryRepository = require('../Repository/category.repository');
+const categoryRepository = require('../repository/category.repository');
 
 const getAllCategories = async (req, res) => {
   return await categoryRepository.getAllCategories();
