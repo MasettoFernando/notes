@@ -1,5 +1,5 @@
 // services/noteService.js
-const noteRepository = require('../Repository/note.repository');
+const noteRepository = require('../repository/note.repository');
 
 const getNotes = async () => {
   return await noteRepository.findAll();

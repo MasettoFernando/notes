@@ -1,7 +1,7 @@
 //services/user.services.js
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const userRepository = require('../Repository/user.repository.js');
+const userRepository = require('../repository/user.repository.js');
 
 const register = async (username, password) => {
   if (!username || !password) {

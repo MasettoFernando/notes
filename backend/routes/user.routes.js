@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const userController = require('../Controllers/user.controller');
+const userController = require('../controllers/user.controller');
 // const authMiddleware = require('../Middlewares/authMiddleware');
 
 // Ruta para registrar un nuevo usuario

@@ -8,7 +8,7 @@ const useUpdateNote = () => {
     try {
       if (!authConfig) return;
 
-      await axios.put(`http://localhost:3100/api/${id}`, updatedNote, authConfig);
+      await axios.put(`${import.meta.env.VITE_API_URL}/api/${id}`, updatedNote, authConfig);
       setNotificationMessage('Note successfully edited');
       setShowButtons(false);
     } catch (err) {

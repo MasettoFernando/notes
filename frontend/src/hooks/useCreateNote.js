@@ -21,7 +21,7 @@ const useCreateNote = (setNotificationMessage, setShowButtons) => {
     };
 
     try {
-      await axios.post('http://localhost:3100/api', newNote, authConfig); 
+      await axios.post(`${import.meta.env.VITE_API_URL}/api`, newNote, authConfig);
 
       setNotificationMessage('Note successfully created');
       setShowButtons(false); 

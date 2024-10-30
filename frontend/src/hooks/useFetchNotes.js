@@ -13,7 +13,7 @@ const useFetchNotes = (selectedCategory, isArchived) => {
       if (!authConfig) return;
       
       try {
-        const response = await axios.get('http://localhost:3100/api', authConfig);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api`, authConfig);
         setNotes(response.data.notes);
       } catch (error) {
         console.error('Error al obtener las notas:', error);

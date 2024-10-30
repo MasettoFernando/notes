@@ -9,7 +9,7 @@ const useCategories = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('http://localhost:3100/categories');
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/categories`);
         setCategories(response.data);
       } catch (err) {
         setError('Error fetching categories');

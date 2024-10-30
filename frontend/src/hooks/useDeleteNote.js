@@ -9,7 +9,7 @@ const useDeleteNote = (removeNote, setNotificationMessage, setShowButtons) => {
     if (!authConfig) return; 
     if (noteToDelete) {
       try {
-        await axios.delete(`http://localhost:3100/api/${noteToDelete}`, authConfig);
+        await axios.delete(`${import.meta.env.VITE_API_URL}/api/${noteToDelete}`, authConfig);
 
         removeNote(noteToDelete);
 

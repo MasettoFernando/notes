@@ -16,7 +16,7 @@ const useRegister = () => {
     }
 
     try {
-      await axios.post('http://localhost:3100/api/users/register', { username, password });
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/users/register`, { username, password });
       navigate('/login');
     } catch (err) {
       setError('Error registering the user.');

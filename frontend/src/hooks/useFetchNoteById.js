@@ -13,7 +13,7 @@ const useFetchNoteById = (id) => {
       if (!authConfig) return; 
 
       try {
-        const response = await axios.get(`http://localhost:3100/api/${id}`, authConfig);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/${id}`, authConfig);
         setNote(response.data);
       } catch (error) {
         console.error('Error fetching note:', error);
